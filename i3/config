@@ -1,12 +1,12 @@
 # #---Basic Definitions---# #
 for_window [class="^.*"] border pixel 2
-gaps inner 15
-gaps outer 15
+gaps inner 13
+gaps outer 13
 set $term --no-startup-id $TERMINAL
 set $mod Mod4
-#exec_always --no-startup-id compton &
+exec_always --no-startup-id compton &
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
-exec_always --no-startup-id /usr/bin/feh --bg-fill ~/Imágenes/astor.jpg &
+exec_always --no-startup-id /usr/bin/feh --bg-fill ~/Imágenes/orange_2.png &
 
 
 # #---Dropdown Windows---# #
@@ -44,7 +44,6 @@ bindsym $mod+Shift+y        exec --no-startup-id i3resize left
 
 bindsym $mod+u              exec --no-startup-id ddspawn tmuxdd
 bindsym $mod+Shift+u        exec --no-startup-id i3resize down
-
 bindsym $mod+Shift+i        exec --no-startup-id i3resize up
 
 bindsym $mod+o              sticky toggle
@@ -160,7 +159,10 @@ for_window [title="mpvfloat"] border pixel 0
 no_focus   [title="mpvfloat"]
 
 # #---Function Buttons---# #
-bindsym $mod+F2     restart
+bindsym $mod+F2             restart
+bindsym $mod+Shift+F3       exec i3 restart
+
+
 
 # #---Arrow Keys---# #
 bindsym $mod+Left           focus left
@@ -208,3 +210,5 @@ bindsym XF86AudioPlay   exec playerctl play-pause
 bindsym XF86AudioNext   exec playerctl next
 bindsym XF86AudioPrev   exec playerctl previous
 
+border_radius 13
+#font pango:DejaVu Sans Mono 10
