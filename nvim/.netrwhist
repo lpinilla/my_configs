@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/lautaro/.config/i3'
+let g:netrw_dirhist_2='/etc/grub.d'
+let g:netrw_dirhist_1='/home/lautaro/Escritorio/Protos/TP/pop3proxy/bin'
