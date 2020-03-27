@@ -5,8 +5,21 @@ gaps outer 13
 set $term --no-startup-id $TERMINAL
 set $mod Mod4
 exec_always --no-startup-id compton &
+exec_always --no-startup-id dunst &
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
 exec_always --no-startup-id /usr/bin/feh --bg-fill ~/Imágenes/orange_2.png &
+exec_always --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
+
+
+exec_always --no-startup-id xset +fp /home/lautaro/.font/ ; xset fp rehash
+
+exec_always --no-startup-id notify-send "$(fortune)" #hacer más específico
+
+
+
+# spotify controls
+#ln -s /tmp/polybar_mqueue.$! /tmp/ipc-bottom
+exec_always --no-startup-id python ~/.config/polybar/scripts/spotify/py_spotify_listener.py >/dev/null &
 
 
 # #---Dropdown Windows---# #
@@ -179,9 +192,10 @@ bindsym $mod+Shift+Up       move up
 bindsym $mod+Shift+Right    move right
 
 # #---Mis programas---# #
-bindsym $mod+Return     exec konsole
+bindsym $mod+Return     exec gnome-terminal
 
 bindsym $mod+d      exec i3-dmenu-desktop
+bindsym $mod+r      exec rofi -show window,run
 
 bindsym  $mod+n    exec nautilus
 
@@ -195,8 +209,11 @@ bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer -D pulse sset Master
 #decrease sound volume
 bindsym XF86AudioLowerVolume     exec --no-startup-id amixer -D pulse sset Master 5%-
 
-#decrease sound volume
+#mute sound volume
 bindsym XF86AudioMute           exec --no-startup-id amixer -q -D pulse sset Master toggle
+
+#mute microphone
+bindsym XF86AudioMicMute        exec --no-startup-id amixer -c 1 sset Mic toggle
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp     exec xbacklight -inc 20 # increase screen brightness
@@ -212,3 +229,10 @@ bindsym XF86AudioPrev   exec playerctl previous
 
 border_radius 13
 #font pango:DejaVu Sans Mono 10
+
+bindym $mod+m   exec spotify
+
+# change workspace with mouse scroll
+bindsym --whole-window --border $mod+button4 workspace next
+bindsym --whole-window --border $mod+button5 workspace prev
+
