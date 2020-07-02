@@ -8,6 +8,8 @@ Plug 'liuchengxu/graphviz.vim'
 Plug 'svermeulen/vim-easyclip'
 Plug 'tpope/vim-repeat'
 Plug 'qpkorr/vim-renamer'
+Plug 'vim-scripts/Rainbow-Parenthesis'
+Plug 'samoshkin/vim-mergetool'
 call plug#end()
 
 colorscheme nord

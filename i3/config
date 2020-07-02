@@ -9,6 +9,7 @@ exec_always --no-startup-id dunst &
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
 exec_always --no-startup-id /usr/bin/feh --bg-fill ~/Imágenes/meditation_wallpaper_orange.png &
 exec_always --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
+exec_always --no-startup-id redshift &
 
 
 exec_always --no-startup-id xset +fp /home/lautaro/.font/ ; xset fp rehash

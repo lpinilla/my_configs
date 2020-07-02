@@ -1,5 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
-let g:netrw_dirhist_3='/home/lautaro/.config/i3'
-let g:netrw_dirhist_2='/etc/grub.d'
-let g:netrw_dirhist_1='/home/lautaro/Escritorio/Protos/TP/pop3proxy/bin'
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/sys/class/backlight/acpi_video0'
+let g:netrw_dirhist_3='/home/lautaro/Escritorio/cripto/tp/TPCripto/src'
+let g:netrw_dirhist_2='/home/lautaro/.config/i3'
+let g:netrw_dirhist_1='/usr/share/pulseaudio/alsa-mixer/profile-sets'
+let g:netrw_dirhist_0='/home/lautaro/Escritorio/cripto/guias/guia3/ejer2'
+let g:netrw_dirhist_9='/home/lautaro/Escritorio/TLA/2020/mini_evaluaciones/eval1'
+let g:netrw_dirhist_8='/home/lautaro/Escritorio/TLA/2020/mini_evaluaciones/eval2'
+let g:netrw_dirhist_7='/usr/share/games/fortunes'
+let g:netrw_dirhist_6='/home/lautaro/.config'
+let g:netrw_dirhist_5='/home/lautaro/Escritorio/Infosys'
