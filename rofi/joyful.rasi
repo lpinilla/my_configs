@@ -1,0 +1,59 @@
+* {
+  background-color: #ffaa55f0;
+  font: "Roboto 12";
+  fg: #ffffff;
+  bg-alt: #6eba6e;
+  joy-black-light: #ffffff;
+  joy-green: #6eba6e;
+  border: 0;
+  lines: 8;
+  padding: 0;
+  margin: 0;
+  spacing: 0;
+}
+
+window {
+  width: 650;
+  border-radius: 13;
+}
+
+mainbox {
+  padding: 20 40;
+  children: [inputbar, listview];
+}
+
+listview {
+  columns: 1;
+}
+
+element {
+  padding: 12;
+  font: "Roboto bold 12";
+  orientation: vertical;
+  text-color: @fg;
+}
+
+element selected {
+  background-color: @bg-alt;
+  text-color: @joy-black-light;
+}
+
+inputbar {
+  background-color: @background;
+  children: [prompt, entry];
+  padding: 2;
+}
+
+prompt {
+  enabled: true;
+  font: "Roboto Bold 14";
+  padding: 12 0 0 12;
+  text-color: @joy-green;
+}
+
+entry {
+  padding: 12;
+  marin: 0 0 0 40;
+  font: "Roboto Bold 14";
+  text-color: @joy-green;
+}
